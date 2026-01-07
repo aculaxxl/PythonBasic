@@ -1,0 +1,6 @@
+text = input('Enter your text: ')
+letters = sum(1 for char in text if char.isalpha())
+numbers = sum(1 for char in text if char.isdigit())
+print('letters: ', letters)
+print('numbers', numbers)
+print('spaces: ', text.count(' '))
