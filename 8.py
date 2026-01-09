@@ -1,4 +1,5 @@
 string = input("Input your message: ")
+print(string[1::3])
 symbol = input("Input your sybol: ")
 i = string.find(symbol)
 if i == -1:
