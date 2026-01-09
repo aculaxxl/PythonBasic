@@ -8,6 +8,8 @@ while True:
         break
     list_num.append(num)
 print(list_num)
+print(list(enumerate(list_num)))
+print(type(list(enumerate(list_num))[1]))
 i = int(input('input searching number: '))
 k = 0
 list_inx = []
