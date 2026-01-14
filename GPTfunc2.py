@@ -16,5 +16,4 @@ def filter_user(u:list, a:int, b:str ):
     if i == 0:
         print("Такого користувача не існує!")
 
-filter_user(new_users, age_find, city_find)  
 
