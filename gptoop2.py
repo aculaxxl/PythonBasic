@@ -10,16 +10,12 @@ class BankAccount:
         self.account_balance += deposit_value
     
     def withdraw(self, withdraw_value):
-        self.account_balance -= withdraw_value
-        if self.account_balance < 0:
-            self.account_balance = self.start_balance
+        if self.account_balance - withdraw_value < 0:
             raise ValueError('Недостатньо коштів')
+        self.account_balance -= withdraw_value
             
     def transfer(self,another_account, transfer_value):
         self.withdraw(transfer_value)
-        if self.account_balance < 0:
-            self.account_balance = self.start_balance
-            raise ValueError('Недостатньо коштів')
         another_account.deposit(transfer_value)
     def get_balance(self):
         return self.account_balance
